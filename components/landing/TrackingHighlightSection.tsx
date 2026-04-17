@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/Card";
 
 export function TrackingHighlightSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-[#fdfbf7]">
+    <section className="py-24 relative overflow-hidden bg-amber-50">
       {/* Brutalist accents instead of glow */}
       <div className="absolute top-10 right-10 w-32 h-32 bg-yellow-400 rounded-full border-2 border-gray-900 shadow-brutal opacity-20"></div>
       <div className="absolute bottom-20 left-0 w-48 h-48 bg-violet-400 rounded-full border-2 border-gray-900 shadow-brutal opacity-20 -translate-x-1/2"></div>
@@ -53,9 +53,9 @@ export function TrackingHighlightSection() {
           </div>
 
           {/* Right Exploded Visual */}
-          <div className="w-full lg:w-7/12 relative h-[500px]">
+          <div className="w-full lg:w-7/12 relative min-h-128">
             {/* Main Dashboard Panel */}
-            <div className="absolute inset-0 bg-white border-2 border-gray-900 rounded-[3rem] p-4 shadow-brutal z-20">
+            <div className="absolute inset-0 bg-white border-2 border-gray-900 rounded-3xl p-4 shadow-brutal z-20">
               <div className="w-full h-full bg-gray-900 rounded-3xl overflow-hidden relative flex flex-col">
                 {/* Faux header */}
                 <div className="h-16 border-b border-gray-800 flex items-center justify-between px-6">

@@ -2,6 +2,7 @@
 **Stack:** Next.js 16 · Tailwind CSS v4 · No component library
 
 > **For AI agents:** When generating components, strictly follow this document. Never invent spacing, colors, shadows, or styles outside this system. Use the reusable components defined here — never re-implement their styles inline. When in doubt, read the actual source files referenced in each section.
+> **Strict Design Rule:** NEVER use arbitrary Tailwind values (e.g. `bg-[#...]`, `text-[...]`, `shadow-[...]`, `rounded-[...]`, `leading-[...]`, etc.). ALWAYS use the closest available built-in Tailwind utility classes for colors, spacing, shadows, and sizing to ensure consistency and maintainability.
 
 ---
 
@@ -10,7 +11,7 @@
 This is a **bold, high-contrast, playful neubrutalist** landing page. It combines thick black borders, hard offset shadows, warm backgrounds, and oversized typography to create a confident, premium feel.
 
 ### Core visual traits:
-- **Background is warm off-white** (`bg-[#fdfbf7]`) — never pure white for page-level backgrounds. Sections alternate between `bg-white` and `bg-[#fdfbf7]`.
+- **Background is warm off-white** (`bg-amber-50`) — never pure white for page-level backgrounds. Sections alternate between `bg-white` and `bg-amber-50`.
 - **All interactive elements have thick black borders** — `border-2 border-gray-900` on cards, buttons, inputs, and decorative elements.
 - **Shadows are hard and offset** — custom `shadow-brutal` (6px offset) and `shadow-brutal-sm` (3px offset). These shift on hover/active for a tactile press effect.
 - **Typography is oversized and black-weight** — `font-black`, `tracking-tight` / `tracking-tighter`. Headlines use `text-5xl` to `text-8xl`.
@@ -25,7 +26,7 @@ This is a **bold, high-contrast, playful neubrutalist** landing page. It combine
 
 | Token | Value / Class | Usage |
 |---|---|---|
-| Page background | `bg-[#fdfbf7]` | Default page and body fill |
+| Page background | `bg-amber-50` | Default page and body fill |
 | Section white | `bg-white` | Alternating section backgrounds |
 | Card surface | `bg-white` | Default card fill |
 | Accent Yellow | `bg-yellow-300` / `bg-yellow-400` | Accent button, step badges, decorative blobs |
@@ -55,7 +56,7 @@ For section-specific gradient text, use inline Tailwind:
 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-600">word</span>
 ```
 
-> ⚠️ The only allowed arbitrary hex value is `#fdfbf7` for the warm off-white background. All other colors must use Tailwind built-in palette.
+> ⚠️ No arbitrary hex values are allowed. All colors must use the Tailwind built-in palette.
 
 ---
 
@@ -93,7 +94,7 @@ const lexend = Lexend({
 
 | Role | Tailwind classes |
 |---|---|
-| Hero Display | `text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-tighter text-gray-900` |
+| Hero Display | `text-5xl md:text-7xl lg:text-8xl font-extrabold leading-none tracking-tighter text-gray-900` |
 | H2 Section | `text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight` |
 | H3 Feature | `text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight` |
 | Body large | `text-lg md:text-xl text-gray-600 leading-relaxed font-medium` |
@@ -146,8 +147,8 @@ Both include built-in hover (shifts 2px) and active (fully pressed) states via C
 | Avatar image | `rounded-full` |
 | Image inside card | `rounded-2xl` |
 | Logo icon | `rounded-lg` |
-| CTA banner | `rounded-[3rem]` |
-| FAQ item | `rounded-[2rem]` |
+| CTA banner | `rounded-3xl` |
+| FAQ item | `rounded-3xl` |
 | Nav link hover | `rounded-full` |
 
 ---
@@ -182,7 +183,7 @@ export function Container({ children, className = "" }) {
 | `accent` | `bg-yellow-300 text-gray-900 hover:bg-yellow-400` + brutal border/shadow | High-emphasis CTA |
 
 **Base classes (all variants):**
-`inline-flex items-center justify-center min-h-[44px] px-8 py-3 rounded-2xl text-base font-bold cursor-pointer transition-colors duration-200`
+`inline-flex items-center justify-center min-h-11 px-8 py-3 rounded-2xl text-base font-bold cursor-pointer transition-colors duration-200`
 
 Non-ghost variants additionally get: `border-2 border-gray-900 shadow-brutal`
 
@@ -236,7 +237,7 @@ For step badges in the timeline, use raw styled `<span>` elements with `border-2
 export function Input({ className = "", ...props }) {
   return (
     <input className={`
-      w-full min-h-[44px] px-6 py-4
+      w-full min-h-11 px-6 py-4
       bg-white text-gray-900
       border-2 border-gray-900 rounded-3xl
       shadow-brutal
@@ -307,7 +308,7 @@ The landing page in `app/page.tsx` renders sections in this order:
 All section components live in `components/landing/`. Each is a server component (no `"use client"`).
 
 ### 9.1 Navbar (`Navbar.tsx`)
-- Sticky, `bg-[#fdfbf7]/90 backdrop-blur-md`, `border-b-2 border-gray-900`
+- Sticky, `bg-amber-50/90 backdrop-blur-md`, `border-b-2 border-gray-900`
 - Logo: yellow `rounded-lg` icon with link SVG + "BioLinks" wordmark
 - Nav links: pill-hover style (`hover:bg-gray-50 rounded-full`)
 - CTA: `<Button variant="accent">` with `shadow-brutal-sm` inside offset wrapper
@@ -315,7 +316,7 @@ All section components live in `components/landing/`. Each is a server component
 ### 9.2 Hero (`HeroSection.tsx`)
 - Two-column grid layout (`lg:grid-cols-12`), NOT centered single column
 - Left: status pill → oversized headline with `.text-gradient` → body → Input + Button inline → social proof avatars
-- Right: phone mockup card (`border-[8px] border-gray-900 shadow-brutal`) + floating stat card + floating product card + decorative blob
+- Right: phone mockup card (`border-8 border-gray-900 shadow-brutal`) + floating stat card + floating product card + decorative blob
 - Background: `bg-mesh-light` + `noise-bg` + large blurred color blobs
 
 ### 9.3 Features (`FeaturesSection.tsx`)
@@ -344,12 +345,12 @@ All section components live in `components/landing/`. Each is a server component
 ### 9.7 FAQ (`FaqSection.tsx`)
 - Centered single-column layout with `max-w-4xl`, NOT two-column
 - Numbered FAQ items using `<details>` / `<summary>`
-- Items: `rounded-[2rem]`, expand to `border-gray-900 shadow-brutal`
+- Items: `rounded-3xl`, expand to `border-gray-900 shadow-brutal`
 - Chevron icon in circular button, rotates on open
 - Answer text uses `animate-fade-up`
 
 ### 9.8 CTA Banner (`CtaBannerSection.tsx`)
-- Single centered card: `bg-violet-600 rounded-[3rem]` — NOT yellow
+- Single centered card: `bg-violet-600 rounded-3xl` — NOT yellow
 - Internal glow effect + dot pattern overlay
 - Large white `font-black` headline with `text-shadow`
 - `<Button variant="accent">` with oversized styling + emoji flairs (🔥 💸)
@@ -390,12 +391,13 @@ All section components live in `components/landing/`. Each is a server component
 
 | ❌ Don't | ✅ Do Instead |
 |---|---|
+| Use arbitrary Tailwind values e.g. `bg-[#...]` | Use built-in standard classes `bg-amber-50` |
 | `border border-gray-200` on cards/buttons/inputs | `border-2 border-gray-900` |
 | `shadow-sm` / `shadow-md` / `hover:shadow-md` on cards/buttons | `shadow-brutal` or `shadow-brutal-sm` |
 | `rounded-full` on buttons | `rounded-2xl` (or `rounded-3xl` for hero CTA) |
 | `rounded-2xl` on cards | `rounded-3xl` |
 | `rounded-xl` on inputs | `rounded-3xl` |
-| `bg-white` for page background | `bg-[#fdfbf7]` |
+| `bg-white` for page background | `bg-amber-50` |
 | `font-semibold` on section headings | `font-black` or `font-extrabold` |
 | `text-2xl md:text-4xl` for H2 | `text-4xl md:text-5xl lg:text-6xl` |
 | `@import url(...)` for fonts | `next/font/google` in layout.tsx |
@@ -456,7 +458,7 @@ Use **inline SVG only** with these defaults:
 
 ```
 Font:              Lexend 400–800 via next/font/google
-Body background:   bg-[#fdfbf7]  (warm off-white)
+Body background:   bg-amber-50  (warm off-white)
 Section alt bg:    bg-white
 Border (primary):  border-2 border-gray-900
 Shadow:            shadow-brutal (6px) · shadow-brutal-sm (3px)
@@ -464,8 +466,8 @@ Radius (card):     rounded-3xl
 Radius (button):   rounded-2xl
 Radius (input):    rounded-3xl
 Radius (badge):    rounded-full
-Radius (CTA card): rounded-[3rem]
-Radius (FAQ item): rounded-[2rem]
+Radius (CTA card): rounded-3xl
+Radius (FAQ item): rounded-3xl
 Container:         <Container>  →  max-w-6xl mx-auto px-6 md:px-12
 Section padding:   py-24 md:py-32
 Card:              <Card>  →  bg-white border-2 border-gray-900 rounded-3xl shadow-brutal

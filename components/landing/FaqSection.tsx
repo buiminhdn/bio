@@ -27,7 +27,7 @@ export function FaqSection() {
   return (
     <section id="faq" className="py-24 md:py-32 bg-white relative">
       {/* Background Graphic */}
-      <div className="absolute top-0 right-0 p-10 pointer-events-none opacity-[0.03]">
+      <div className="absolute top-0 right-0 p-10 pointer-events-none opacity-5">
         <svg width="400" height="400" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 15v-2h-2v2h2zm0-4V7h-2v6h2z" />
         </svg>
@@ -47,7 +47,7 @@ export function FaqSection() {
           {faqs.map((faq, i) => (
             <details
               key={i}
-              className="group bg-gray-50 rounded-[2rem] border-2 border-transparent hover:border-gray-900 transition-colors shadow-sm open:bg-white open:border-gray-900 open:shadow-brutal"
+              className="group bg-gray-50 rounded-3xl border-2 border-transparent hover:border-gray-900 transition-colors shadow-sm open:bg-white open:border-gray-900 open:shadow-brutal"
             >
               <summary className="flex items-center gap-6 p-8 cursor-pointer select-none">
                 <div className="text-3xl font-black text-gray-300 group-open:text-yellow-400 transition-colors">
@@ -72,7 +72,7 @@ export function FaqSection() {
                   </svg>
                 </div>
               </summary>
-              <div className="px-8 pb-8 pt-2 ml-[88px] text-lg text-gray-600 leading-relaxed max-w-2xl">
+              <div className="px-8 pb-8 pt-2 ml-16 md:ml-20 text-lg text-gray-600 leading-relaxed max-w-2xl">
                 <p className="animate-fade-up">{faq.answer}</p>
               </div>
             </details>

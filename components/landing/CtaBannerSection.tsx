@@ -5,9 +5,9 @@ export function CtaBannerSection() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <Container>
-        <div className="relative bg-violet-600 rounded-[3rem] p-10 md:p-20 overflow-hidden shadow-2xl border border-violet-500">
+        <div className="relative bg-violet-600 rounded-3xl p-10 md:p-20 overflow-hidden shadow-2xl border border-violet-500">
           {/* Internal Glows & Textures */}
-          <div className="absolute -top-[50%] -right-[20%] w-[80%] h-[150%] bg-yellow-400 blur-[150px] opacity-40 mix-blend-overlay"></div>
+          <div className="absolute -top-1/2 -right-1/4 w-3/4 h-full bg-yellow-400 blur-3xl opacity-40 mix-blend-overlay"></div>
           <div
             className="absolute inset-0 opacity-20 pointer-events-none"
             style={{

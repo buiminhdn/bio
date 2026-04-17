@@ -66,7 +66,7 @@ export function Footer() {
         {/* Big Brand typography */}
         <div className="w-full border-t border-gray-900 pt-16 pb-8 flex flex-col items-center">
           <h1
-            className="text-[12vw] font-black text-gray-900 leading-none select-none tracking-tighter"
+            className="text-7xl sm:text-8xl md:text-9xl font-black text-gray-900 leading-none select-none tracking-tighter"
             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
           >
             BIOLINKS

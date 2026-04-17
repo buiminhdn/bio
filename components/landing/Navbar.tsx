@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-[#fdfbf7]/90 backdrop-blur-md border-b-2 border-gray-900">
+    <nav className="sticky top-0 z-50 bg-amber-50/70 backdrop-blur-md border-b-2 border-gray-900">
       <Container>
         {/* Added pb-5 to compensate for bottom shadows on buttons */}
         <div className="flex items-center justify-between pt-4 pb-5">
@@ -50,29 +50,22 @@ export function Navbar() {
           </div>
 
           {/* Action buttons */}
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" className="hidden sm:flex">
-              Log In
-            </Button>
-            <div className="mb-[3px] mr-[3px]">
-              <Button variant="accent" className="shadow-brutal-sm">
-                Get Started Free
-                <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="ml-1.5"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Button>
-            </div>
-          </div>
+          <Button variant="accent" className="shadow-brutal-sm">
+            Get Started Free
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="ml-1.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Button>
         </div>
       </Container>
     </nav>

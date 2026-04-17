@@ -6,13 +6,13 @@ export function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="py-24 bg-[#fdfbf7] text-gray-900 relative overflow-hidden"
+      className="py-24 bg-amber-50 text-gray-900 relative overflow-hidden"
     >
       {/* Background brutal lines */}
       <div className="absolute inset-0 flex justify-center opacity-10 pointer-events-none">
-        <div className="w-[2px] h-full bg-gray-900"></div>
-        <div className="w-[2px] h-full bg-gray-900 mx-32"></div>
-        <div className="w-[2px] h-full bg-gray-900"></div>
+        <div className="w-0.5 h-full bg-gray-900"></div>
+        <div className="w-0.5 h-full bg-gray-900 mx-32"></div>
+        <div className="w-0.5 h-full bg-gray-900"></div>
       </div>
 
       <Container className="relative z-10">
@@ -43,7 +43,7 @@ export function HowItWorksSection() {
           <div className="flex flex-col gap-12 lg:gap-0">
             {/* Step 1 */}
             <div className="flex flex-col lg:flex-row items-center justify-between group">
-              <div className="lg:w-[45%] lg:text-right flex flex-col items-start lg:items-end gap-4 order-2 lg:order-1 pt-6 lg:pt-0">
+              <div className="lg:w-5/12 lg:text-right flex flex-col items-start lg:items-end gap-4 order-2 lg:order-1 pt-6 lg:pt-0">
                 <span className="text-gray-900 bg-yellow-300 px-3 py-1 rounded-full border-2 border-gray-900 font-bold tracking-widest uppercase text-xs shadow-brutal">
                   Step 01
                 </span>
@@ -56,15 +56,15 @@ export function HowItWorksSection() {
                   milliseconds.
                 </p>
               </div>
-              <div className="hidden lg:flex w-[10%] justify-center z-10 order-2">
+              <div className="hidden lg:flex w-2/12 justify-center z-10 order-2">
                 <div className="w-16 h-16 rounded-full bg-yellow-300 border-4 border-gray-900 flex items-center justify-center text-gray-900 text-2xl font-black shadow-brutal">
                   1
                 </div>
               </div>
-              <div className="w-full lg:w-[45%] order-1 lg:order-3">
+              <div className="w-full lg:w-5/12 order-1 lg:order-3">
                 <Card className="p-3 overflow-hidden">
                   <img
-                    src="https://picsum.photos/seed/step1c/600/350"
+                    src="/images/influencer9.jpg"
                     alt="Claim handle"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />
@@ -74,21 +74,21 @@ export function HowItWorksSection() {
 
             {/* Step 2 */}
             <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-16 group">
-              <div className="w-full lg:w-[45%] order-1 lg:order-1">
+              <div className="w-full lg:w-5/12 order-1 lg:order-1">
                 <Card className="p-3 overflow-hidden">
                   <img
-                    src="https://picsum.photos/seed/step2c/600/350"
+                    src="/images/influencer1.jpg"
                     alt="Customize"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />
                 </Card>
               </div>
-              <div className="hidden lg:flex w-[10%] justify-center z-10 order-2">
+              <div className="hidden lg:flex w-2/12 justify-center z-10 order-2">
                 <div className="w-16 h-16 rounded-full bg-violet-300 border-4 border-gray-900 flex items-center justify-center text-gray-900 text-2xl font-black shadow-brutal">
                   2
                 </div>
               </div>
-              <div className="lg:w-[45%] text-left flex flex-col items-start gap-4 order-2 lg:order-3 pt-6 lg:pt-0">
+              <div className="lg:w-5/12 text-left flex flex-col items-start gap-4 order-2 lg:order-3 pt-6 lg:pt-0">
                 <span className="text-gray-900 bg-violet-300 px-3 py-1 rounded-full border-2 border-gray-900 font-bold tracking-widest uppercase text-xs shadow-brutal">
                   Step 02
                 </span>
@@ -105,7 +105,7 @@ export function HowItWorksSection() {
 
             {/* Step 3 */}
             <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-16 group">
-              <div className="lg:w-[45%] lg:text-right flex flex-col items-start lg:items-end gap-4 order-2 lg:order-1 pt-6 lg:pt-0">
+              <div className="lg:w-5/12 lg:text-right flex flex-col items-start lg:items-end gap-4 order-2 lg:order-1 pt-6 lg:pt-0">
                 <span className="text-gray-900 bg-green-300 px-3 py-1 rounded-full border-2 border-gray-900 font-bold tracking-widest uppercase text-xs shadow-brutal">
                   Step 03
                 </span>
@@ -118,15 +118,15 @@ export function HowItWorksSection() {
                   analytics.
                 </p>
               </div>
-              <div className="hidden lg:flex w-[10%] justify-center z-10 order-2">
+              <div className="hidden lg:flex w-2/12 justify-center z-10 order-2">
                 <div className="w-16 h-16 rounded-full bg-green-300 border-4 border-gray-900 flex items-center justify-center text-gray-900 text-2xl font-black shadow-brutal">
                   3
                 </div>
               </div>
-              <div className="w-full lg:w-[45%] order-1 lg:order-3">
+              <div className="w-full lg:w-5/12 order-1 lg:order-3">
                 <Card className="p-3 overflow-hidden">
                   <img
-                    src="https://picsum.photos/seed/step3c/600/350"
+                    src="/images/influencer2.jpg"
                     alt="Analyze"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />

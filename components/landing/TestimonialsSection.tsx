@@ -7,7 +7,7 @@ const testimonials = [
       "BioLinks completely changed how I share my affiliate picks. My followers can browse by category and I can see exactly which products they click. Revenue went up 40% in a month.",
     name: "Sarah Nguyen",
     role: "Tech Reviewer",
-    avatar: "https://picsum.photos/seed/sarah/80/80",
+    avatar: "/images/influencer1.jpg",
     tilt: "rotate-2",
     hoverTilt: "hover:rotate-0",
     bg: "bg-yellow-50",
@@ -17,7 +17,7 @@ const testimonials = [
       "I used to juggle Linktree and spreadsheets. Now I have one beautiful page with full click tracking. The drag-and-drop reordering makes curating my picks super easy.",
     name: "Marco Rivera",
     role: "Fashion Blogger",
-    avatar: "https://picsum.photos/seed/marco/80/80",
+    avatar: "/images/influencer2.jpg",
     tilt: "-rotate-3",
     hoverTilt: "hover:rotate-1",
     bg: "bg-violet-50",
@@ -27,7 +27,7 @@ const testimonials = [
       "The redirect tracking is genius — every single click is logged, even when ad-blockers are running. I finally have data I can trust when talking to brands.",
     name: "Linh Pham",
     role: "Fitness Creator",
-    avatar: "https://picsum.photos/seed/linh/80/80",
+    avatar: "/images/influencer3.jpg",
     tilt: "rotate-1",
     hoverTilt: "hover:-rotate-1",
     bg: "bg-green-50",
@@ -38,10 +38,10 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-24 md:py-32 bg-[#fdfbf7] relative overflow-hidden"
+      className="py-24 md:py-32 bg-amber-50 relative overflow-hidden"
     >
       {/* Decorative large quotes */}
-      <div className="absolute top-10 left-10 text-[20rem] text-gray-100 font-serif leading-none opacity-50 pointer-events-none select-none">
+      <div className="absolute top-10 left-10 text-9xl text-gray-100 font-serif leading-none opacity-50 pointer-events-none select-none">
         &ldquo;
       </div>
 
@@ -58,10 +58,10 @@ export function TestimonialsSection() {
 
             <Card className="p-4 flex items-center gap-4">
               <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
+                {[4, 5, 6].map((i) => (
                   <img
                     key={i}
-                    src={`https://picsum.photos/seed/trust${i}/50/50`}
+                    src={`/images/influencer${i}.jpg`}
                     alt="Trust"
                     className="w-12 h-12 rounded-full border-2 border-white object-cover"
                   />
@@ -80,7 +80,7 @@ export function TestimonialsSection() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`flex flex-col gap-6 p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-900 shadow-brutal transition-transform duration-300 hover:-translate-y-4 ${t.hoverTilt} ${t.bg} ${t.tilt}`}
+                className={`flex flex-col gap-6 p-8 md:p-10 rounded-3xl border-2 border-gray-900 shadow-brutal transition-transform duration-300 hover:-translate-y-4 ${t.hoverTilt} ${t.bg} ${t.tilt}`}
               >
                 <div className="text-5xl text-gray-900 opacity-20 font-serif leading-none mt-2 h-8">
                   &ldquo;
