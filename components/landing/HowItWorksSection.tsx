@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
+import { Card } from "@/components/ui/Card";
 
 export function HowItWorksSection() {
   return (
@@ -61,26 +62,26 @@ export function HowItWorksSection() {
                 </div>
               </div>
               <div className="w-full lg:w-[45%] order-1 lg:order-3">
-                <div className="bg-white p-3 rounded-3xl border-2 border-gray-900 shadow-brutal overflow-hidden">
+                <Card className="p-3 overflow-hidden">
                   <img
                     src="https://picsum.photos/seed/step1c/600/350"
                     alt="Claim handle"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />
-                </div>
+                </Card>
               </div>
             </div>
 
             {/* Step 2 */}
             <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-16 group">
               <div className="w-full lg:w-[45%] order-1 lg:order-1">
-                <div className="bg-white p-3 rounded-3xl border-2 border-gray-900 shadow-brutal overflow-hidden">
+                <Card className="p-3 overflow-hidden">
                   <img
                     src="https://picsum.photos/seed/step2c/600/350"
                     alt="Customize"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />
-                </div>
+                </Card>
               </div>
               <div className="hidden lg:flex w-[10%] justify-center z-10 order-2">
                 <div className="w-16 h-16 rounded-full bg-violet-300 border-4 border-gray-900 flex items-center justify-center text-gray-900 text-2xl font-black shadow-brutal">
@@ -123,13 +124,13 @@ export function HowItWorksSection() {
                 </div>
               </div>
               <div className="w-full lg:w-[45%] order-1 lg:order-3">
-                <div className="bg-white p-3 rounded-3xl border-2 border-gray-900 shadow-brutal overflow-hidden">
+                <Card className="p-3 overflow-hidden">
                   <img
                     src="https://picsum.photos/seed/step3c/600/350"
                     alt="Analyze"
                     className="w-full h-auto rounded-2xl object-cover border border-gray-200"
                   />
-                </div>
+                </Card>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { Card } from "@/components/ui/Card";
 
 const testimonials = [
   {
@@ -8,6 +9,7 @@ const testimonials = [
     role: "Tech Reviewer",
     avatar: "https://picsum.photos/seed/sarah/80/80",
     tilt: "rotate-2",
+    hoverTilt: "hover:rotate-0",
     bg: "bg-yellow-50",
   },
   {
@@ -17,6 +19,7 @@ const testimonials = [
     role: "Fashion Blogger",
     avatar: "https://picsum.photos/seed/marco/80/80",
     tilt: "-rotate-3",
+    hoverTilt: "hover:rotate-1",
     bg: "bg-violet-50",
   },
   {
@@ -26,6 +29,7 @@ const testimonials = [
     role: "Fitness Creator",
     avatar: "https://picsum.photos/seed/linh/80/80",
     tilt: "rotate-1",
+    hoverTilt: "hover:-rotate-1",
     bg: "bg-green-50",
   },
 ];
@@ -52,7 +56,7 @@ export function TestimonialsSection() {
               for it.
             </h2>
 
-            <div className="flex items-center gap-4 bg-white p-4 rounded-3xl shadow-brutal border-2 border-gray-900">
+            <Card className="p-4 flex items-center gap-4">
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <img
@@ -69,14 +73,14 @@ export function TestimonialsSection() {
                   Over 5,000+ creators
                 </p>
               </div>
-            </div>
+            </Card>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`flex flex-col gap-6 p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-900 shadow-brutal transition-transform duration-300 hover:-translate-y-4 hover:${t.tilt === "rotate-2" ? "rotate-0" : t.tilt === "-rotate-3" ? "rotate-1" : "-rotate-1"} ${t.bg} ${t.tilt}`}
+                className={`flex flex-col gap-6 p-8 md:p-10 rounded-[2.5rem] border-2 border-gray-900 shadow-brutal transition-transform duration-300 hover:-translate-y-4 ${t.hoverTilt} ${t.bg} ${t.tilt}`}
               >
                 <div className="text-5xl text-gray-900 opacity-20 font-serif leading-none mt-2 h-8">
                   &ldquo;

@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 
 export function HeroSection() {
   return (
@@ -48,10 +49,10 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <input
+              <Input
                 type="text"
                 placeholder="biolin.ks/yourname"
-                className="px-6 py-4 rounded-3xl border-2 border-gray-900 bg-white shadow-brutal focus:outline-none focus:ring-0 text-lg w-full sm:w-72"
+                className="w-full sm:w-72"
               />
               <Button
                 variant="primary"
@@ -81,7 +82,7 @@ export function HeroSection() {
                     key={i}
                     src={`https://picsum.photos/seed/huser${i}/60/60`}
                     alt="User"
-                    className="w-10 h-10 rounded-full border-2 border-white cover shadow-sm"
+                    className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm"
                   />
                 ))}
               </div>

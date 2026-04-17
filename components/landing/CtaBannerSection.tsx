@@ -5,7 +5,7 @@ export function CtaBannerSection() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <Container>
-        <div className="relative bg-violet-600 rounded-[3rem] p-10 md:p-20 overflow-hidden shadow-2xl border border-violet-500 card-3d">
+        <div className="relative bg-violet-600 rounded-[3rem] p-10 md:p-20 overflow-hidden shadow-2xl border border-violet-500">
           {/* Internal Glows & Textures */}
           <div className="absolute -top-[50%] -right-[20%] w-[80%] h-[150%] bg-yellow-400 blur-[150px] opacity-40 mix-blend-overlay"></div>
           <div
@@ -29,8 +29,8 @@ export function CtaBannerSection() {
 
             <div className="mt-8 relative z-10">
               <Button
-                variant="primary"
-                className="px-12 py-5 bg-yellow-400 text-gray-900 rounded-3xl font-black text-2xl hover:bg-yellow-300 transition-colors shadow-brutal flex items-center justify-center gap-4 group"
+                variant="accent"
+                className="px-12 py-5 rounded-3xl font-black text-2xl gap-4 group"
               >
                 Launch Your Profile
                 <svg

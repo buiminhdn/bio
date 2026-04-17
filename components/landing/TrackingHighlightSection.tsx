@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { Card } from "@/components/ui/Card";
 
 export function TrackingHighlightSection() {
   return (
@@ -32,22 +33,22 @@ export function TrackingHighlightSection() {
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-4">
-              <div className="bg-white border-2 border-gray-900 rounded-3xl p-6 shadow-brutal">
+              <Card className="p-6">
                 <span className="text-4xl font-black text-gray-900 mb-2 block">
                   100%
                 </span>
                 <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                   Click Logging
                 </span>
-              </div>
-              <div className="bg-white border-2 border-gray-900 rounded-3xl p-6 shadow-brutal">
+              </Card>
+              <Card className="p-6">
                 <span className="text-4xl font-black text-gray-900 mb-2 block">
                   &lt;20<span className="text-2xl">ms</span>
                 </span>
                 <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
                   Redirect Time
                 </span>
-              </div>
+              </Card>
             </div>
           </div>
 

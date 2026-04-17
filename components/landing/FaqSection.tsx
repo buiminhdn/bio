@@ -33,7 +33,7 @@ export function FaqSection() {
         </svg>
       </div>
 
-      <Container className="max-w-4xl mx-auto">
+      <Container className="max-w-4xl">
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter mb-4">
             You asked. <br />{" "}

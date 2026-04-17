@@ -9,7 +9,6 @@ export function Card({
     <div
       className={`
         bg-white border-2 border-gray-900 rounded-3xl
-        p-8 md:p-10
         shadow-brutal
         transition-all duration-200
         ${className}
