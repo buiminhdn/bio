@@ -1,11 +1,12 @@
 import { ButtonHTMLAttributes } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "accent";
 
 const variants: Record<Variant, string> = {
   primary: "bg-gray-900 text-white hover:bg-gray-800",
   secondary: "bg-white text-gray-900 hover:bg-gray-50",
   ghost: "bg-transparent text-gray-700 hover:bg-gray-100 shadow-none border-transparent",
+  accent: "bg-yellow-300 text-gray-900 hover:bg-yellow-400",
 };
 
 export function Button({

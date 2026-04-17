@@ -54,8 +54,8 @@ export function Navbar() {
             <Button variant="ghost" className="hidden sm:flex">
               Log In
             </Button>
-            <div className="mb-1.5 mr-1.5">
-              <Button variant="primary">
+            <div className="mb-[3px] mr-[3px]">
+              <Button variant="accent" className="shadow-brutal-sm">
                 Get Started Free
                 <svg
                 width="16"

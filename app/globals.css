@@ -107,6 +107,22 @@ html {
   box-shadow: 0px 0px 0px 0px rgba(17, 24, 39, 1);
 }
 
+/* Brutalist small shadow */
+.shadow-brutal-sm {
+  box-shadow: 3px 3px 0px 0px rgba(17, 24, 39, 1) !important;
+  transition: all 0.2s ease;
+}
+
+.shadow-brutal-sm:hover {
+  transform: translate(1px, 1px) !important;
+  box-shadow: 2px 2px 0px 0px rgba(17, 24, 39, 1) !important;
+}
+
+.shadow-brutal-sm:active {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 0px 0px 0px 0px rgba(17, 24, 39, 1) !important;
+}
+
 /* Removed Soft 3D Hover Lift */
 
 /* Noise overlay for texture */
